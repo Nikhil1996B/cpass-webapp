@@ -1,11 +1,10 @@
-
 .slider {
   // display: flex;
   // position: relative;
 
   &__container {
     display: flex;
-    padding: 0 75px;
+    padding: 0;
     transition: transform 3s ease 100ms;
     z-index: 3;
     width: 100%;
@@ -15,15 +14,16 @@
     opacity: 1;
   }
 
-  &:not(&--open) .item:hover {
-    transform: scale(1.5) !important;
-  }
+  /*css used for on hover image zoom */
+  // &:not(&--open) .item:hover {
+  //   transform: scale(1.5) !important;
+  // }
 
-  &:not(&--open):hover .item {
-    transform: translateX(-25%);
-  }
+  // &:not(&--open):hover .item {
+  //   transform: translateX(-25%);
+  // }
 
-  &:not(&--open) .item:hover ~ .item {
-    transform: translateX(25%);
-  }
+  // &:not(&--open) .item:hover ~ .item {
+  //   transform: translateX(25%);
+  // }
 }

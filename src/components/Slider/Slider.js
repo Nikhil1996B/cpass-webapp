@@ -39,14 +39,14 @@ const Slider = ({ children, activeSlide }) => {
     <SliderContext.Provider value={contextValue}>
       <SliderWrapper>
         <div
-          className={cx('slider', { 'slider--open': currentSlide != null })}
+          className={`${cx('slider', { 'slider--open': currentSlide != null })} slider-cover`}
         >
           <div ref={containerRef} className="slider__container" {...slideProps}>{children}</div>
         </div>
-        {hasPrev && <SlideButton onClick={handlePrev} type="prev" />}
-        {hasNext && <SlideButton onClick={handleNext} type="next" />}
+        {(hasPrev && <SlideButton onClick={handlePrev} type="prev" />)}
+        {(hasNext && <SlideButton onClick={handleNext} type="next" />)}
       </SliderWrapper>
-      {/* {currentSlide && <Content movie={currentSlide} onClose={handleClose} />} */}
+      {currentSlide && <Content movie={currentSlide} onClose={handleClose} />}
     </SliderContext.Provider>
   );
 };

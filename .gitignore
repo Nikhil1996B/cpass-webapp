@@ -49,3 +49,5 @@ Thumbs.db
 *.wmv
 
 package-lock.json
+# Local Netlify folder
+.netlify

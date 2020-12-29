@@ -1,0 +1,15 @@
+.hero-banner {
+    height: 60vh;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(10px);
+    background-image: url("./bg-img.png");
+    background-position: right 3em bottom 10px;
+    background-size: cover;
+    background-position: top right 10px;
+    margin-bottom: 40px;
+}
+
+.header {
+    background: black;
+    height: 4vh;
+}

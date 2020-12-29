@@ -7,26 +7,23 @@
   &__background__shadow,
   &__background__image,
   &__area {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
   }
 
   &__background {
-    left: 0;
     right: 0;
 
     &__shadow {
-      left: 0;
-      background: #000;
       width: 30%;
       z-index: 2;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 10;
-        background-image: linear-gradient(to right,#000,transparent);
+        background-image: linear-gradient(to right, #000, transparent);
         top: 0;
         bottom: 0;
         left: 100%;
@@ -45,10 +42,10 @@
   }
 
   &__area {
-    left: 0;
     right: 0;
+    background-color: black;
     height: 100%;
-    z-index: 3;
+    z-index: 5;
 
     &__container {
       padding: 30px 70px;
@@ -57,12 +54,14 @@
   }
 
   &__title {
+    text-align: center;
     font-size: 45px;
     color: #fff;
     font-weight: 700;
   }
 
   &__description {
+    text-align: center;
     font-size: 18px;
     color: #999;
     margin-top: 20px;
@@ -79,5 +78,13 @@
     position: absolute;
     top: 30px;
     right: 30px;
+  }
+}
+
+.img {
+  text-align: center;
+  padding-top: 60px;
+  img {
+    height: 240px;
   }
 }

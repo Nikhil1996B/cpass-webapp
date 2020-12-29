@@ -5,6 +5,7 @@ import ShowDetailsButton from './ShowDetailsButton'
 import Mark from './Mark'
 import './Item.scss'
 
+
 const Item = ({ movie }) => (
   <SliderContext.Consumer>
     {({ onSelectSlide, currentSlide, elementRef }) => {
@@ -13,12 +14,13 @@ const Item = ({ movie }) => (
       return (
         <div
           ref={elementRef}
-          className={cx('item', {
+          className={`${cx('item', {
             'item--open': isActive,
-          })}
+          })} `}
+          onClick={() => onSelectSlide(movie)}
         >
           <img src={movie.image} alt="" />
-          {movie.title && <p className="title">{movie.title}</p>}
+          {(movie.title && <p className="title">{movie.title}</p>)}
           <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
           {isActive && <Mark />}
         </div>

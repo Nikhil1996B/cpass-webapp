@@ -23,9 +23,7 @@ function App() {
   // }, [dispatch]);
 
   return (
-    
-          <Routes />
-      
+    <Routes />
   );
 }
 

@@ -8,11 +8,12 @@ const Content = ({ movie, onClose }) => (
       <div className="content__background__shadow" />
       <div
         className="content__background__image"
-        style={{ 'background-image': `url(${movie.imageBg})` }}
+        style={{ 'backgroundImage': `url(${movie.imageBg})` }}
       />
     </div>
     <div className="content__area">
       <div className="content__area__container">
+        {movie.image && <div className="img"><img src={`${movie.image}`} alt={`content image ${movie.img}`} /></div>}
         <div className="content__title">{movie.title}</div>
         <div className="content__description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
@@ -25,7 +26,7 @@ const Content = ({ movie, onClose }) => (
         <IconCross />
       </button>
     </div>
-  </div>
+  </div >
 );
 
 export default Content;

@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cb72ae67.chunk.css",
+    "main.js": "/static/js/main.d6f78f76.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.6891842c.js",
+    "static/js/2.9aebbb64.chunk.js": "/static/js/2.9aebbb64.chunk.js",
+    "index.html": "/index.html",
+    "precache-manifest.ad8ef1fecd821bcc529a979502c8278c.js": "/precache-manifest.ad8ef1fecd821bcc529a979502c8278c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.9aebbb64.chunk.js.LICENSE.txt": "/static/js/2.9aebbb64.chunk.js.LICENSE.txt",
+    "static/media/FullSideNav.css": "/static/media/GothamLight.8566e233.ttf",
+    "static/media/HomePageStyle.css": "/static/media/background-layout.4939fdb8.png",
+    "static/media/cast1.png": "/static/media/cast1.a8b7b903.png",
+    "static/media/devices.svg": "/static/media/devices.6f1ef219.svg",
+    "static/media/images@2x.png": "/static/media/images@2x.f78c57a9.png",
+    "static/media/img2.png": "/static/media/img2.36f788d5.png",
+    "static/media/logout-2.svg": "/static/media/logout-2.234a14fb.svg",
+    "static/media/movie-clapper.svg": "/static/media/movie-clapper.0952afe0.svg",
+    "static/media/series.svg": "/static/media/series.18c30ce6.svg",
+    "static/media/slider3.png": "/static/media/slider3.b7f1ed7f.png",
+    "static/media/slider4.png": "/static/media/slider4.a9fb8850.png",
+    "static/media/user.svg": "/static/media/user.6b0e7cbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6891842c.js",
+    "static/js/2.9aebbb64.chunk.js",
+    "static/css/main.cb72ae67.chunk.css",
+    "static/js/main.d6f78f76.chunk.js"
+  ]
+}

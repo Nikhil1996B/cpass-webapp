@@ -13,14 +13,14 @@ import devicesLogo from "../../assets/images/devices.svg"
 function SideNav() {
   const [show, setShow] = useState(false);
   return (
-    <div class="sidenav">
+    <div className="sidenav">
       <a href ="/home" >
       <img src={Logo} alt="nav-logo" className="nav-logo"/>
       </a>
       <a href ="/home">
       <img src={profile} alt="profie-pic" className="profile-pic"/>
       </a>
-      <span class="caption">JD</span>
+      <span className="caption">JD</span>
       <a href ="/home">
       <img src={movieLogo} alt="movie-logo" className="movie-logo"></img>
       </a>

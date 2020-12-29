@@ -5,8 +5,8 @@ class Header extends Component {
     render() {
         return (
             <header data-test='headerComponent'>
-                <div class="showcase-top">
-                    <a href="#" class="btn btn-rounded">Sign In</a>
+                <div className="showcase-top">
+                    <a href="#" className="btn btn-rounded">Sign In</a>
                 </div>
             </header>
         )
