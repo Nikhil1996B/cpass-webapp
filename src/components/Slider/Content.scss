@@ -1,3 +1,8 @@
+/* Normalize */
+@import "~normalize-scss/sass/normalize";
+
+@import "../../common-styles/variables";
+
 .content {
   position: relative;
   height: 37vw;
@@ -33,7 +38,7 @@
 
     &__image {
       right: 0;
-      width: 70%;
+      width: 50%;
       height: 100%;
       background-position: center 10%;
       background-size: cover;

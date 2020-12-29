@@ -1,3 +1,8 @@
+/* Normalize */
+@import "~normalize-scss/sass/normalize";
+
+@import "../../common-styles/variables";
+
 .slider {
   // display: flex;
   // position: relative;
@@ -5,7 +10,7 @@
   &__container {
     display: flex;
     padding: 0;
-    transition: transform 3s ease 100ms;
+    transition: transform 1s ease 100ms;
     z-index: 3;
     width: 100%;
   }

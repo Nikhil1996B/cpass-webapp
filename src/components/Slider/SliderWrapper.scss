@@ -1,3 +1,8 @@
+/* Normalize */
+@import "~normalize-scss/sass/normalize";
+
+@import "../../common-styles/variables";
+
 .slider-wrapper {
   padding: 0px 20px;
   overflow: hidden;

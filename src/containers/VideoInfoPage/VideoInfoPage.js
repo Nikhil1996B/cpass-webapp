@@ -130,7 +130,7 @@ function VideoInfoPage() {
                 <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
                 <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
             </div>
-            <section aria-label="hero banner">
+            <section aria-label="hero banner" className="bannerWrapper">
                 <HeroBanner />
             </section>
             <section aria-label="cast carosal section">

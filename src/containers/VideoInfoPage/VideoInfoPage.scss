@@ -11,9 +11,9 @@
     height: 100% !important;
 }
 .carosal-title {
-    padding: 0 72px 0 102px;
+    padding: 0 72px 0 106px;
     text-align: left;
-    font: normal normal bold 24px Gotham;
+    font: normal normal bold $font-size-h3 GothamLight;
     letter-spacing: 0px;
     color: #ffffff;
     margin: 18px 0px 8px 0px;
@@ -24,3 +24,6 @@
     background: black;
 }
 
+.bannerWrapper {
+    padding-left: 101px;
+}
