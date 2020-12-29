@@ -42,11 +42,8 @@ export class HeroBanner extends Component {
         return (
             <>
                 <div className="header" />
-                <div className="hero-bg">
-                    <div className="scrim" />
-                    <div className="hero-banner" >
-                        {this.imageContent}
-                    </div>
+                <div className="hero-banner" >
+                    {this.imageContent}
                 </div>
             </>
         )
