@@ -1,0 +1,19 @@
+/* VideoInfoPage.scss */
+
+/* Normalize */
+@import "~normalize-scss/sass/normalize";
+
+@import "../../common-styles/variables";
+
+.page-background {
+    background-color: $black !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.carosal-title {
+    padding: 0 72px 0 102px;
+    text-align: left;
+    font: normal normal bold 27px/30px Gotham;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
