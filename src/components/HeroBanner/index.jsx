@@ -8,7 +8,7 @@ export class HeroBanner extends Component {
 
     get ratingsSection() {
         const ratings = {
-            value: 2.5,
+            value: 4.5,
             name: "half-rating-read",
             precision: 0.5,
             readOnly: true,
@@ -17,7 +17,12 @@ export class HeroBanner extends Component {
         return (
             <div className="ratingsSection">
                 {<h2>{`Breaking Bad: S3 E6`}</h2>}
-                <Ratings ratings={ratings} />
+                {<p className="ratings-wrapper">
+                    <span className="ratings-value">
+                        {ratings.value}
+                    </span>
+                    <Ratings ratings={ratings} />
+                </p>}
             </div>
         )
     }
@@ -37,8 +42,11 @@ export class HeroBanner extends Component {
         return (
             <>
                 <div className="header" />
-                <div className="hero-banner" >
-                    {this.imageContent}
+                <div className="hero-bg">
+                    <div className="scrim" />
+                    <div className="hero-banner" >
+                        {this.imageContent}
+                    </div>
                 </div>
             </>
         )
