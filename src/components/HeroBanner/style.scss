@@ -103,11 +103,33 @@ p {
 
 .action-panel {
     margin: 0 0 0 24px;
-    background-color: #303030;
-    border-radius: 1rem;
+    background-color: #202020;
+    border-radius: 3rem;
     box-shadow: #000000;
     width: 60%;
     padding: 12px;
+}
+
+.like-logo {
+    height: 20px;
+    padding: 9px;
+    opacity: 1;
+    border: 3px solid #ffab0f;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-link {
+    width: 20%;
+    text-align: center;
+    // letter-spacing: -0.24px;
+    padding: 4px;
+    color: #ffffff;
+    opacity: 0.5;
+    span {
+        padding-left: 12px;
+    }
 }
 
 .genres {
@@ -137,6 +159,10 @@ p {
     padding: 0.75rem;
     margin-bottom: 0;
 }
+.list-inline {
+    display: flex;
+    flex-direction: row;
+}
 .form-check label input[type="checkbox"] {
     opacity: 0;
 }
@@ -164,5 +190,11 @@ p {
         text-align: center;
         display: flex;
         flex-direction: column;
+    }
+    .form-check label {
+        display: flex;
+    }
+    .ratings-wrapper {
+        padding: 0 0 0 24px;
     }
 }

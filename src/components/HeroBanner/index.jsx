@@ -3,6 +3,7 @@ import bgImg from './images/bg-img.png'
 import bdImg from './images/bd.png'
 import Ratings from '../../UI_Frontendlib/atoms/ratings/ratings'
 import RatingsButton from '../../UI_Frontendlib/atoms/RatingsButton'
+import like from './images/like.png'
 
 require('./style.scss')
 
@@ -11,6 +12,81 @@ require('./style.scss')
  */
 export class HeroBanner extends Component {
 
+    // method to create movie genres
+    get genereType() {
+        return (
+            <div className="sub-type" >
+                <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
+                    <label class="btn genres">
+                        <input type="checkbox" className="form-check list-group-item" />Action
+                </label>
+                    <label className="btn genres">
+                        <input type="checkbox" class="form-check list-group-item" />Crime
+                </label>
+                    <label className="btn genres">
+                        <input type="checkbox" class="form-check list-group-item" />Drama
+                 </label>
+                    <label className="btn genres">
+                        <input type="checkbox" class="form-check list-group-item" />Fantasy
+                </label>
+                </div></div>
+        )
+    }
+
+    get actionPanel() {
+        return (
+            <div className="action-panel">
+                <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
+                    <a href="/videoinfo" className="icon-link">
+                        <img
+                            src={like}
+                            alt="devices-logo"
+                            className="like-logo"
+                        ></img>
+                        <br />
+                        <span>
+                            Like
+                        </span>
+                    </a>
+                    <a href="/videoinfo" className="icon-link">
+                        <img
+                            src={like}
+                            alt="devices-logo"
+                            className="like-logo"
+                        ></img>
+                        <br />
+                        <span>
+                            Like
+                        </span>
+                    </a>
+                    <a href="/videoinfo" className="icon-link">
+                        <img
+                            src={like}
+                            alt="devices-logo"
+                            className="like-logo"
+                        ></img>
+                        <br />
+                        <span>
+                            share
+                        </span>
+                    </a>
+                    <a href="/videoinfo" className="icon-link">
+                        <img
+                            src={like}
+                            alt="devices-logo"
+                            className="like-logo"
+                        ></img>
+                        <br />
+                        <span>
+                            Download
+                        </span>
+                    </a>
+                </div>
+            </div >
+        )
+    }
+
+    // Method to display ratings 
     get ratingsSection() {
 
         const ratings = {
@@ -33,24 +109,9 @@ export class HeroBanner extends Component {
                     <RatingsButton value={ratings.value} />
                 </p>}
                 {<p className="sub-type cotnent">{`43 Minutes - USA`}</p>}
-
-                <div className="sub-type" >
-                    <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
-                        <label class="btn genres">
-                            <input type="checkbox" className="form-check list-group-item" />Action
-                        </label>
-                        <label className="btn genres">
-                            <input type="checkbox" class="form-check list-group-item" />Crime
-                        </label>
-                        <label className="btn genres">
-                            <input type="checkbox" class="form-check list-group-item" />Drama
-                         </label>
-                        <label className="btn genres">
-                            <input type="checkbox" class="form-check list-group-item" />Fantasy
-                        </label>
-                    </div></div>
+                {this.genereType}
                 {<p className="sub-type cotnent">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
-                <div className="action-panel">pannel</div>
+                {this.actionPanel}
             </div>
         )
     }
