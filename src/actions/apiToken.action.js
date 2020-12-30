@@ -2,6 +2,11 @@ import { apiTokenService } from "../services";
 //import { alertActions } from "./";
 import { apiTokenConstants } from "../constants";
 
+export const apiTokenActions = {
+  login,
+  logout,
+};
+
 function login(username, password) {
   return (dispatch) => {
     dispatch(request({ username }));
@@ -31,8 +36,3 @@ function logout() {
   apiTokenService.logout();
   return { type: apiTokenConstants.LOGOUT };
 }
-
-export const apiTokenActions = {
-  login,
-  logout,
-};

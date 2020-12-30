@@ -23,6 +23,7 @@ export class HeroBanner extends Component {
         return (
             <div className="ratingsSection">
                 {<h2>{`Breaking Bad: S3 E6`}</h2>}
+                {<p className="sub-type">Series</p>}
                 {<p className="ratings-wrapper">
                     <span className="ratings-value">
                         {ratings.value}
@@ -30,6 +31,10 @@ export class HeroBanner extends Component {
                     <Ratings ratings={ratings} />
                     <RatingsButton value={ratings.value} />
                 </p>}
+                {<p className="sub-type">{`43 Minutes - USA`}</p>}
+                <div className=" sub-type" ><button className="genres">Action</button></div>
+                {<p className="sub-type">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
+                <div className="action-panel">pannel</div>
             </div>
         )
     }
