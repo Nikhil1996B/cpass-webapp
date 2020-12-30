@@ -25,7 +25,7 @@ p {
     display: flex;
     z-index: 1;
     flex-direction: row;
-    min-height: 64vh;
+    min-height: 74vh;
     background: rgba(255, 255, 255, 0.082);
     // -webkit-backdrop-filter: blur(128px);
     // backdrop-filter: blur(28px);
@@ -66,11 +66,16 @@ p {
 }
 
 .blackLayer {
-    width: 100%;
+    box-shadow: -102px -52px 49px black;
+    opacity: 0.95;
+    right: 0;
+    z-index: 5;
+    background: black;
+    position: absolute;
+    width: 13%;
     height: 100%;
-    background-color: #000;
-    opacity: 0.5;
 }
+
 .ratingsSection {
     // border: 1px solid white;
     z-index: 2;
@@ -168,6 +173,9 @@ p {
 }
 
 @media screen and (max-width: $small-below) {
+    .blackLayer {
+        display: none;
+    }
     .desc-img {
         left: 69%;
     }

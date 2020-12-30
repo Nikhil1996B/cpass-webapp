@@ -130,7 +130,6 @@ export class HeroBanner extends Component {
     render() {
         return (
             <>
-                <div className="header" />
                 <div className="blackLayer" />
                 <div className="hero-banner" >
                     {this.imageContent}
