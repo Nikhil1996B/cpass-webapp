@@ -3,7 +3,7 @@ import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
 import Carosal from "../../components/Carosal"
 import Hamburger from "../../assets/images/hamburger.png";
-import Slider from '../../components/Slider';
+import Slider from '../../UI_Frontendlib/molecules/Slider';
 import HeroBanner from '../../components/HeroBanner'
 import './VideoInfoPage.scss';
 import castMock from './__mock/cast'

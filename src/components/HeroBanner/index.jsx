@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-import './style.scss'
 import bgImg from './images/bg-img.png'
 import bdImg from './images/bd.png'
-import Ratings from './../../UI_Frontendlib/ratings/ratings'
+import Ratings from '../../UI_Frontendlib/atoms/ratings/ratings'
+import RatingsButton from '../../UI_Frontendlib/atoms/RatingsButton'
+require('./style.scss')
 
+/**
+ * Hero Banner React component
+ */
 export class HeroBanner extends Component {
 
     get ratingsSection() {
+
         const ratings = {
             value: 4.5,
             name: "half-rating-read",
@@ -14,6 +19,7 @@ export class HeroBanner extends Component {
             readOnly: true,
             classname: null
         };
+
         return (
             <div className="ratingsSection">
                 {<h2>{`Breaking Bad: S3 E6`}</h2>}
@@ -22,6 +28,7 @@ export class HeroBanner extends Component {
                         {ratings.value}
                     </span>
                     <Ratings ratings={ratings} />
+                    <RatingsButton value={ratings.value} />
                 </p>}
             </div>
         )

@@ -53,7 +53,7 @@
         text-align: left;
         margin: 0 0 0 24px;
         font-weight: 600;
-        font: normal normal normal 31px/33px GothamLight;
+        font: normal normal normal 33px GothamLight;
         letter-spacing: 0px;
         color: #ffffff;
         opacity: 1;
@@ -77,10 +77,23 @@
     .desc-img {
         left: 69%;
     }
+    .ratings-value {
+        font: 24px;
+    }
     .hero-banner {
         display: flex;
         flex-direction: column;
         padding-left: 13px;
         padding-top: 26px;
+    }
+    .ratingsSection {
+        h2 {
+            font: 33px;
+        }
+    }
+    .ratings-wrapper {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 }
