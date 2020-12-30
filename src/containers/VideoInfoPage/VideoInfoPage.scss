@@ -20,6 +20,7 @@
 }
 
 .headerShadow {
+    display: flex;
     z-index: 3;
     top: 10px;
     min-height: 74px;
@@ -36,6 +37,34 @@
     padding-left: 101px;
     margin-right: 20px;
 }
+
+.right-navsection {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    display: flex;
+    padding: 10px 26px;
+    button {
+        text-align: center;
+        font-weight: 1000;
+        text-transform: uppercase;
+        letter-spacing: 1.26px;
+        color: #000000;
+        opacity: 1;
+    }
+}
+
+.upgrade {
+    background: transparent linear-gradient(180deg, #ffbb3b 0%, #ffa90a 100%) 0% 0% no-repeat padding-box;
+    border-radius: 9px;
+    padding: 3px;
+    margin-left: 8px;
+    opacity: 1;
+    border: none;
+    width: 104px;
+}
+
+
 
 @media screen and (max-width: $small-below) {
     .bannerWrapper {

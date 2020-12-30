@@ -3,6 +3,7 @@ import bgImg from './images/bg-img.png'
 import bdImg from './images/bd.png'
 import Ratings from '../../UI_Frontendlib/atoms/ratings/ratings'
 import RatingsButton from '../../UI_Frontendlib/atoms/RatingsButton'
+
 require('./style.scss')
 
 /**
@@ -23,7 +24,7 @@ export class HeroBanner extends Component {
         return (
             <div className="ratingsSection">
                 {<h2>{`Breaking Bad: S3 E6`}</h2>}
-                {<p className="sub-type">Series</p>}
+                {<p className="sub-type cotnent">Series</p>}
                 {<p className="ratings-wrapper">
                     <span className="ratings-value">
                         {ratings.value}
@@ -31,9 +32,24 @@ export class HeroBanner extends Component {
                     <Ratings ratings={ratings} />
                     <RatingsButton value={ratings.value} />
                 </p>}
-                {<p className="sub-type">{`43 Minutes - USA`}</p>}
-                <div className=" sub-type" ><button className="genres">Action</button></div>
-                {<p className="sub-type">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
+                {<p className="sub-type cotnent">{`43 Minutes - USA`}</p>}
+
+                <div className="sub-type" >
+                    <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
+                        <label class="btn genres">
+                            <input type="checkbox" className="form-check list-group-item" />Action
+                        </label>
+                        <label className="btn genres">
+                            <input type="checkbox" class="form-check list-group-item" />Crime
+                        </label>
+                        <label className="btn genres">
+                            <input type="checkbox" class="form-check list-group-item" />Drama
+                         </label>
+                        <label className="btn genres">
+                            <input type="checkbox" class="form-check list-group-item" />Fantasy
+                        </label>
+                    </div></div>
+                {<p className="sub-type cotnent">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
                 <div className="action-panel">pannel</div>
             </div>
         )

@@ -17,6 +17,10 @@ p {
     padding: 18px 0;
 }
 
+.cotnent {
+    text-shadow: 2px 2px 8px #080808;
+}
+
 .hero-banner {
     display: flex;
     z-index: 1;
@@ -107,6 +111,7 @@ p {
 }
 
 .genres {
+    margin: 8px;
     background: #bebebe 0% 0% no-repeat padding-box;
     border-radius: 7px;
     border: none;
@@ -117,6 +122,23 @@ p {
     font: normal normal medium 17px/22px Gilroy ☞;
     color: white;
     height: 40px;
+}
+
+// Movie types css section
+.list-group-horizontal .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+.list-group-horizontal .list-group-item:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0;
+}
+.form-check label {
+    padding: 0.75rem;
+    margin-bottom: 0;
+}
+.form-check label input[type="checkbox"] {
+    opacity: 0;
 }
 
 @media screen and (max-width: $small-below) {
