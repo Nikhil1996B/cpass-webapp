@@ -30,7 +30,11 @@
 }
 
 .bannerWrapper {
+    -webkit-box-shadow: inset 17px 72px 1020px #0000;
+    -moz-box-shadow: inset 17px 72px 1020px #0000;
+    box-shadow: inset 17px 72px 1020px #0000;
     padding-left: 101px;
+    margin-right: 20px;
 }
 
 @media screen and (max-width: $small-below) {

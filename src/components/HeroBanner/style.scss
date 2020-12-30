@@ -19,15 +19,18 @@
     margin-bottom: 40px;
     border-radius: 2px solid #000000;
     padding-left: 76px;
+    backdrop-filter: blur(33px);
+    -webkit-backdrop-filter: blur(33px);
     padding-top: 63px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    background-image: url("./images/bg-img.png");
+    box-shadow: inset 93px 2px 139px 128px #ccc;
+    background-image: url("./images/narcos.png");
 }
 
 .hero-banner:after,
 .hero-banner:before {
     content: "";
     background-attachment: fixed;
+    box-shadow: inset 44px 74px 181px #ccc;
     filter: blur(8px);
     background: url("./images/bg-img.png");
     z-index: 1;
@@ -45,7 +48,7 @@
 }
 
 .ratingsSection {
-    border: 1px solid white;
+    // border: 1px solid white;
     z-index: 2;
     // min-width: 608px;
     width: 60%;
@@ -81,6 +84,7 @@
         font: 24px;
     }
     .hero-banner {
+        box-shadow: inset 93px 2px 139px 128px #ccc;
         display: flex;
         flex-direction: column;
         padding-left: 13px;
