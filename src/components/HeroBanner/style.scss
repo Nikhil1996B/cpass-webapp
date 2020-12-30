@@ -173,6 +173,10 @@ p {
 }
 
 @media screen and (max-width: $small-below) {
+    .action-panel {
+        width: 48%;
+        // padding-left: 10px !important;
+    }
     .blackLayer {
         display: none;
     }
