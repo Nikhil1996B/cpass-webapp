@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./HomePageStyle.css";
 import { useSelector } from "react-redux"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -10,11 +9,13 @@ import faceBookIcon from "../../assets/facebookButton.png";
 import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
 import Hamburger from "../../assets/images/hamburger.png";
-import Header from '../../components/partials/Header'
+// import Header from '../../components/partials/Header'
 import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
 import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
 import continueWaching from '../VideoInfoPage/__mock/continuewatching'
 import moviesMock from '../VideoInfoPage/__mock/movies'
+
+require('./HomePageStyle.scss')
 
 function HomePage() {
   const [inputs, setInputs] = useState({
@@ -33,9 +34,11 @@ function HomePage() {
       <div className='d-flex'>
         <SideNav ></SideNav>
         <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
-        {/* <Header /> */}
       </div>
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
+      <div className="right-navsection">
+        {/* <Header /> */}
+      </div>
       <AutoPlaySlider />
       <GetContinueWatching continueWaching={continueWaching} />
       <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />

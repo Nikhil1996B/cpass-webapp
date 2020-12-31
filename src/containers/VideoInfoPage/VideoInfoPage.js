@@ -16,7 +16,7 @@ const movies = moviesMock
 
 const cast = castMock
 
-const Header = () => {
+export const Header = () => {
     return (
         <div>
             <Search />
