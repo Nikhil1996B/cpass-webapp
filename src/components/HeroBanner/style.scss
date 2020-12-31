@@ -27,9 +27,6 @@ p {
     flex-direction: row;
     min-height: 74vh;
     background: rgba(255, 255, 255, 0.082);
-    // -webkit-backdrop-filter: blur(128px);
-    // backdrop-filter: blur(28px);
-    border-right: 1px solid whitesmoke;
     border-radius: 4px;
     background-position: right 3em bottom 10px;
     background-size: cover;
@@ -173,15 +170,21 @@ p {
 }
 
 @media screen and (max-width: $small-below) {
+    .sub-type {
+        padding: 12px 0;
+    }
     .action-panel {
-        width: 48%;
-        // padding-left: 10px !important;
+        width: 78%;
+        margin: 0 0 0 8px;
     }
     .blackLayer {
         display: none;
     }
     .desc-img {
         left: 69%;
+        img {
+            width: 100%;
+        }
     }
     .ratings-value {
         font: 24px;
@@ -194,21 +197,24 @@ p {
     .hero-banner {
         width: 100%;
         min-height: 66vh;
-        box-shadow: inset 93px 2px 139px 128px#707070;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         display: flex;
         flex-direction: column;
-        padding-left: 13px;
+        padding-left: 4px;
         padding-top: 26px;
+        background-image: none;
+        box-shadow: none;
+        background-color: black;
     }
     .ratingsSection {
+        width: 100%;
         h2 {
             font: 33px;
         }
     }
     .ratings-wrapper {
-        text-align: center;
         display: flex;
-        flex-direction: column;
     }
     .form-check label {
         display: flex;
@@ -219,5 +225,19 @@ p {
     .icon-link span {
         margin-bottom: 10px;
         padding-left: 0px;
+    }
+    .list-inline {
+        flex-direction: row;
+    }
+    .genres {
+        margin: 1px;
+    }
+    .form-check label {
+        height: 26px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 370px) {
+    body {
+        margin: -28px;
     }
 }
