@@ -12,6 +12,7 @@
   &__background__shadow,
   &__background__image,
   &__area {
+    overflow: auto;
     position: fixed;
     top: 0;
     bottom: 0;
