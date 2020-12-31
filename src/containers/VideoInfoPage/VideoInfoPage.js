@@ -6,6 +6,7 @@ import Hamburger from "../../assets/images/hamburger.png";
 import Slider from '../../UI_Frontendlib/molecules/Slider';
 import Search from '../../UI_Frontendlib/molecules/Search';
 import HeroBanner from '../../components/HeroBanner'
+import Footer from '../../components/Footer/footer'
 import './VideoInfoPage.scss';
 import castMock from './__mock/cast'
 import moviesMock from './__mock/movies'
@@ -72,6 +73,7 @@ function VideoInfoPage() {
             </section>
             <GetCardsCarosal cast={cast} />
             <GetRecommendationCarosal movies={movies} />
+            {/* <Footer /> */}
         </div>
     )
 }

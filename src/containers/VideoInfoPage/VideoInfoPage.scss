@@ -64,11 +64,17 @@
     width: 104px;
 }
 
-
-
 @media screen and (max-width: $small-below) {
     .bannerWrapper {
         padding-left: 69px;
         padding-right: 14px;
     }
 }
+
+// html,
+// body {
+//     overflow-x: hidden;
+// }
+// body {
+//     position: relative;
+// }
