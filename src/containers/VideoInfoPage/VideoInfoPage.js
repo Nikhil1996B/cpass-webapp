@@ -10,6 +10,7 @@ import Footer from '../../components/Footer/footer'
 import './VideoInfoPage.scss';
 import castMock from './__mock/cast'
 import moviesMock from './__mock/movies'
+import continueWaching from './__mock/continuewatching'
 
 const movies = moviesMock
 
@@ -61,6 +62,19 @@ const GetRecommendationCarosal = ({ movies = [], title = "You may also like" }) 
     )
 }
 
+const GetContinueWatching = ({ continueWaching = [], title = "Continue watching" }) => {
+    return (
+        <section aria-label="recommendation carosal section">
+            <p className={"carosal-title"}>{title}</p>
+            <Slider>
+                {continueWaching.map(continueWaching => (
+                    <Slider.Item movie={continueWaching} key={continueWaching.id}>item1</Slider.Item>
+                ))}
+            </Slider>
+        </section>
+    )
+}
+
 function VideoInfoPage() {
     const [Navshow, setNavShow] = useState(false);
     const handleNavModal = () => setNavShow(!Navshow);
@@ -73,6 +87,7 @@ function VideoInfoPage() {
             </section>
             <GetCardsCarosal cast={cast} />
             <GetRecommendationCarosal movies={movies} />
+            <GetContinueWatching continueWaching={continueWaching} />
             {/* <Footer /> */}
         </div>
     )

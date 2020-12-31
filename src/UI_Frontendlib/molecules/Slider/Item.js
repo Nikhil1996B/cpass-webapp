@@ -3,7 +3,7 @@ import cx from 'classnames';
 import SliderContext from './context'
 import ShowDetailsButton from './ShowDetailsButton'
 import Mark from './Mark'
-
+import Progress from '../../atoms/linerprogress'
 require('./Item.scss')
 
 const Item = ({ movie }) => (
@@ -20,6 +20,9 @@ const Item = ({ movie }) => (
           onClick={() => onSelectSlide(movie)}
         >
           <img src={movie.image} alt="" />
+          {movie.progress && <div>
+            <Progress value={movie.progress} />
+          </div>}
           {(movie.title && <p className="title">{movie.title}</p>)}
           <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
           {isActive && <Mark />}
