@@ -2,7 +2,7 @@
   background: url("./../../assets/graphics/background-layout.png") no-repeat center center/cover;
   background-color: black !important;
   width: 100% !important;
-  height: 100vh !important;
+  min-height: 100vh !important;
 }
 .modal-back {
   background-color: white;

@@ -11,6 +11,10 @@ import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
 import Hamburger from "../../assets/images/hamburger.png";
 import Header from '../../components/partials/Header'
+import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
+import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
+import continueWaching from '../VideoInfoPage/__mock/continuewatching'
+import moviesMock from '../VideoInfoPage/__mock/movies'
 
 function HomePage() {
   const [inputs, setInputs] = useState({
@@ -32,6 +36,9 @@ function HomePage() {
         {/* <Header /> */}
       </div>
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
+      <AutoPlaySlider />
+      <GetContinueWatching continueWaching={continueWaching} />
+      <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
       <div>
         <Button variant="warning" onClick={handleModal}>
           Login
@@ -88,6 +95,7 @@ function HomePage() {
             />{" "}
           </div>
         </Modal.Body>
+
         <Modal.Footer>
         </Modal.Footer>
       </Modal>

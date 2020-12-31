@@ -38,7 +38,7 @@ const HeaderSahdow = ({ Navshow, handleNavModal }) => {
     )
 }
 
-const GetCardsCarosal = ({ title = 'Cast', cast = [] }) => {
+export const GetCardsCarosal = ({ title = 'Cast', cast = [] }) => {
     return (<section aria-label="cast carosal section">
         <p className={"carosal-title"}>{title}</p>
         <Slider>
@@ -49,7 +49,7 @@ const GetCardsCarosal = ({ title = 'Cast', cast = [] }) => {
     </section>)
 }
 
-const GetRecommendationCarosal = ({ movies = [], title = "You may also like" }) => {
+export const GetRecommendationCarosal = ({ movies = [], title = "You may also like" }) => {
     return (
         <section aria-label="recommendation carosal section">
             <p className={"carosal-title"}>{title}</p>
@@ -62,7 +62,7 @@ const GetRecommendationCarosal = ({ movies = [], title = "You may also like" }) 
     )
 }
 
-const GetContinueWatching = ({ continueWaching = [], title = "Continue watching" }) => {
+export const GetContinueWatching = ({ continueWaching = [], title = "Continue watching" }) => {
     return (
         <section aria-label="recommendation carosal section">
             <p className={"carosal-title"}>{title}</p>
@@ -86,8 +86,8 @@ function VideoInfoPage() {
                 <HeroBanner />
             </section>
             <GetCardsCarosal cast={cast} />
-            <GetRecommendationCarosal movies={movies} />
             <GetContinueWatching continueWaching={continueWaching} />
+            <GetRecommendationCarosal movies={movies} />
             {/* <Footer /> */}
         </div>
     )
