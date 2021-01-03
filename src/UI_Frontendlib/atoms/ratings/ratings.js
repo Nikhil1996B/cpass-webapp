@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Rating from '@material-ui/lab/Rating';
 import star from '../../icons/star.svg';
 import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types'
+
 
 import './style.scss'
 
@@ -22,18 +24,44 @@ const customIcons = {
 }
 
 class Ratings extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+    // Error boundary added
+    static getDerivedStateFromError(error) {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error, errorInfo) {
+        // logErrorToMyService(error, errorInfo);
+    }
+
     render() {
-        const { value, name, precision, readOnly, classname } = this.props.ratings
+        const { value, name, precision, readOnly, classname } = this.props;
+
+        if (!value) {
+            return null;
+        }
+        if (this.state.hasError) return <div>Something went wrong.</div>;
         return (
-            <div className={classname ? classname : 'ratings'}>
+            <div className={classname ? classname : 'ratings'} data-test='ratingsComponent'>
                 {readOnly ?
-                    <Rating name={`${name}`} defaultValue={value} precision={precision} readOnly />
+                    <Rating name={`${name}`} defaultValue={value} precision={precision} readOnly data-test='ratings' />
                     :
-                    <Rating name={`${name}`} defaultValue={value} precision={precision} />
+                    <Rating name={`${name}`} defaultValue={value} precision={precision} data-test='ratings' />
                 }
             </div>
         )
     }
+}
+
+Ratings.propTypes = {
+    value: PropTypes.number,
+    name: PropTypes.string,
+    precision: PropTypes.number,
+    readOnly: PropTypes.bool,
+    className: PropTypes.string
 }
 
 export default Ratings

@@ -41,13 +41,21 @@ p {
     background-image: url("./images/narcos.png");
 }
 
-.hero-banner:after,
 .hero-banner:before {
+    content: " ";
+    opacity: 0.6;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
     content: "";
     background-attachment: fixed;
-    box-shadow: inset 44px 74px 181px#707070;
+    box-shadow: inset 93px 2px 139px 128px #707070;
     filter: blur(8px);
-    background: url("./images/bg-img.png");
+    background-image: url("./images/narcos.png");
     z-index: 1;
 }
 
@@ -56,6 +64,7 @@ p {
     height: 4vh;
 }
 .desc-img {
+    z-index: 1;
     display: relative;
     color: white;
     font-weight: bold;
@@ -194,7 +203,8 @@ p {
         display: flex;
         flex-direction: column;
     }
-    .hero-banner {
+    .hero-banner,
+    .hero-banner:before {
         width: 91%;
         min-height: 66vh;
         backdrop-filter: none;

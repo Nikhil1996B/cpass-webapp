@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
-import Carosal from "../../components/Carosal"
+import Carosal from "../../components/Carosal";
+import PropTypes from 'prop-types';
 import Hamburger from "../../assets/images/hamburger.png";
 import Slider from '../../UI_Frontendlib/molecules/Slider';
 import Search from '../../UI_Frontendlib/molecules/Search';
@@ -17,9 +18,13 @@ const movies = moviesMock
 const cast = castMock
 
 export const Header = () => {
+    const configSearch = {
+        placeholder: 'Search',
+        display: true
+    }
     return (
-        <div>
-            <Search />
+        <div data-test="headerComponent">
+            <Search {...configSearch} />
         </div>
     )
 }
@@ -80,17 +85,23 @@ function VideoInfoPage() {
     const handleNavModal = () => setNavShow(!Navshow);
 
     return (
-        <div className="page-background">
+        <div className="page-background" data-test='VideoInfoPage'>
             <HeaderSahdow Navshow={Navshow} handleNavModal={handleNavModal} />
             <section aria-label="hero banner" className="bannerWrapper">
                 <HeroBanner />
             </section>
-            <GetCardsCarosal cast={cast} />
-            <GetContinueWatching continueWaching={continueWaching} />
-            <GetRecommendationCarosal movies={movies} />
+            <GetCardsCarosal cast={cast} data-test='castCarosalComponent' />
+            <GetContinueWatching continueWaching={continueWaching} data-test='continueWarchingComponent' />
+            <GetRecommendationCarosal movies={movies} data-test='recommededMoviesComponent' />
             {/* <Footer /> */}
         </div>
     )
+}
+
+VideoInfoPage.propTypes = {
+    cast: PropTypes.array,
+    continueWaching: PropTypes.array,
+    movies: PropTypes.array
 }
 
 export { VideoInfoPage }

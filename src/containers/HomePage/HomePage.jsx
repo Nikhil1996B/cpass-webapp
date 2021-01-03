@@ -29,6 +29,20 @@ function HomePage() {
   const handleModal = () => setShow(true);
 
   const { email, password } = inputs;
+
+  // Configure Autoplay slider
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    display: true
+  };
+
   return (
     <div className="home-background">
       <div className='d-flex'>
@@ -39,7 +53,7 @@ function HomePage() {
       <div className="right-navsection">
         {/* <Header /> */}
       </div>
-      <AutoPlaySlider />
+      <AutoPlaySlider {...settings} />
       <GetContinueWatching continueWaching={continueWaching} />
       <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
       <div>

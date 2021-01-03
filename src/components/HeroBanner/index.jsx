@@ -15,19 +15,19 @@ export class HeroBanner extends Component {
     // method to create movie genres
     get genereType() {
         return (
-            <div className="sub-type" >
+            <div className="sub-type" data-test='genereComponent'>
                 <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
-                    <label class="btn genres">
+                    <label className="btn genres">
                         <input type="checkbox" className="form-check list-group-item" />Action
                 </label>
                     <label className="btn genres">
-                        <input type="checkbox" class="form-check list-group-item" />Crime
+                        <input type="checkbox" className="form-check list-group-item" />Crime
                 </label>
                     <label className="btn genres">
-                        <input type="checkbox" class="form-check list-group-item" />Drama
+                        <input type="checkbox" className="form-check list-group-item" />Drama
                  </label>
                     <label className="btn genres">
-                        <input type="checkbox" class="form-check list-group-item" />Fantasy
+                        <input type="checkbox" className="form-check list-group-item" />Fantasy
                 </label>
                 </div></div>
         )
@@ -35,7 +35,7 @@ export class HeroBanner extends Component {
 
     get actionPanel() {
         return (
-            <div className="action-panel">
+            <div className="action-panel" data-test='actionComponent'>
                 <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
                     <a href="/videoinfo" className="icon-link">
                         <img
@@ -97,17 +97,27 @@ export class HeroBanner extends Component {
             classname: null
         };
 
+        const fetch = () => {
+            // Initiate fetch action
+            console.log('callback for fetch')
+        }
+
+        const configButton = {
+            buttonText: ratings.value,
+            emitEvent: fetch
+        }
+
         return (
-            <div className="ratingsSection">
+            <div className="ratingsSection" data-test='ratingsComponent'>
                 {<h2>{`Breaking Bad: S3 E6`}</h2>}
                 {<p className="sub-type cotnent">Series</p>}
-                {<p className="ratings-wrapper">
+                {<div className="ratings-wrapper">
                     <span className="ratings-value">
                         {ratings.value}
                     </span>
-                    <Ratings ratings={ratings} />
-                    <RatingsButton value={ratings.value} />
-                </p>}
+                    <Ratings {...ratings} />
+                    <RatingsButton  {...configButton} />
+                </div>}
                 {<p className="sub-type cotnent">{`43 Minutes - USA`}</p>}
                 {this.genereType}
                 {<p className="sub-type cotnent">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
