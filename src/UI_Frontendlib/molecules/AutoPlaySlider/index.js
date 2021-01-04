@@ -14,19 +14,12 @@ export class AutoPlaySlider extends Component {
         if (!display) {
             return null;
         }
-
+        // var bodyStyles = document.body.style;
+        // bodyStyles.setProperty('--background-color', '#00bfff');
+        // bodyStyles.setProperty('--background-url', "./images/blackgradient.png");
         return (
             <div className="autopaly-container" data-test="sliderComponent">
                 <Slider {...settings}>
-                    <div>
-                        <img src={image} alt="" />
-                    </div>
-                    <div>
-                        <img src={image} alt="" />
-                    </div>
-                    <div>
-                        <img src={image} alt="" />
-                    </div>
                     <div>
                         <img src={image} alt="" />
                     </div>
