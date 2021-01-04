@@ -10,30 +10,41 @@ export default [
         image: movieImg,
         imageBg: '/images/slide1b.webp',
         title: 'Money Heist',
+        showDetails: true
+
     },
     {
         id: 2,
         image: img2,
         imageBg: '/images/slide2b.webp',
-        title: 'Avengers- Infinity war'
+        title: 'Avengers- Infinity war',
+        showDetails: true
+
     },
     {
         id: 3,
         image: slider3,
         imageBg: '/images/slide3b.webp',
         title: 'Ford v/s ferrari',
+        showDetails: true,
+
+
     },
     {
         id: 4,
         image: slider4,
         imageBg: '/images/slide4b.webp',
-        title: 'Batman - Dark Knight rises'
+        title: 'Batman - Dark Knight rises',
+        showDetails: true
+
     },
     {
         id: 5,
         image: movieImg,
         imageBg: '/images/slide1b.webp',
         title: 'Money Heist',
+        showDetails: true
+
     },
     {
         id: 6,
@@ -51,7 +62,8 @@ export default [
         id: 8,
         image: slider4,
         imageBg: '/images/slide4b.webp',
-        title: 'Batman - Dark Knight rises'
+        title: 'Batman - Dark Knight rises',
+        showDetails: true
     },
     {
         id: 9,

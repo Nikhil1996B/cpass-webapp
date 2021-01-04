@@ -11,7 +11,8 @@ export default [
         imageBg: '/images/slide1b.webp',
         title: 'Money Heist',
         progress: 40,
-        showDetails: true
+        showDetails: false,
+        movieInfo: true
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export default [
         imageBg: '/images/slide2b.webp',
         title: 'Avengers- Infinity war',
         progress: 10,
-        showDetails: true
+        showDetails: false,
+        movieInfo: true
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ export default [
         imageBg: '/images/slide3b.webp',
         title: 'Ford v/s ferrari',
         progress: 22,
-        showDetails: true
+        showDetails: false,
+        movieInfo: true
     }
 ]

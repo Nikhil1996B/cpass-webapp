@@ -2,4 +2,14 @@
   text-align: center;
   margin: auto;
   padding-top: 50px;
+ 
+}
+.errorDiv h2 {
+  border: none;
+  line-height: 1rem;
+  display:center;
+}
+
+.errorDiv p {
+  display: center;
 }

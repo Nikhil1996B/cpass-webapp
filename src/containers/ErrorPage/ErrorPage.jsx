@@ -10,6 +10,10 @@ class ErrorPage extends React.Component {
           <br />
           <br /> Please try again later.
         </h2>
+        <nav>
+          <p><a href="/">Home</a></p>
+          <p onClick={() => { window.history.back() }}>Go Back</p>
+        </nav>
       </div>
     );
   }

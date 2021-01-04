@@ -13,6 +13,7 @@ export default [
         imageBg: '/images/slide1b.webp',
         content: 'Bryan Lee Cranston (born March 7, 1956) is an American actor, director, producer, and screenwriter. He is best known for his roles as Walter White in the AMC crime drama series Breaking Bad (2008–2013), Tim Whatley in the NBC sitcom Seinfeld (1994–1997), Hal in the Fox sitcom Malcolm in the Middle (2000– 2006), and Vince Lonigan in the Prime Video crime drama series Sneaky Pete (2015–2019).',
         title: 'Bryan Cranston',
+        showDetails: true
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ export default [
         imageBg: '/images/slide1b.webp',
         content: 'Aaron Paul (born March 7, 1986) is an American actor. He is best known for his roles as Walter White in the AMC crime drama series Breaking Bad (2008–2013), Tim Whatley in the NBC sitcom Seinfeld (1994–1997), Hal in the Fox sitcom Malcolm in the Middle (2000– 2006), and Vince Lonigan in the Prime Video crime drama series Sneaky Pete (2015–2019).',
         title: 'Aaron Paul',
+        showDetails: true
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ export default [
         imageBg: '/images/slide1b.webp',
         content: 'Anna Gunn (born March 7, 1976) is an American actor, director and producers. shee is best known for his roles as Walter White in the AMC crime drama series Breaking Bad (2008–2013), Tim Whatley in the NBC sitcom Seinfeld (1994–1997), Hal in the Fox sitcom Malcolm in the Middle (2000– 2006), and Vince Lonigan in the Prime Video crime drama series Sneaky Pete (2015–2019).',
         title: 'Anna Gunn',
+        showDetails: true
     },
     {
         id: 4,
@@ -34,5 +37,6 @@ export default [
         imageBg: '/images/slide1b.webp',
         content: 'Dean Norris (born March 7, 1956) is an American actor, director, producer, and screenwriter. He is best known for his roles as Walter White in the AMC crime drama series Breaking Bad (2008–2013), Tim Whatley in the NBC sitcom Seinfeld (1994–1997), Hal in the Fox sitcom Malcolm in the Middle (2000– 2006), and Vince Lonigan in the Prime Video crime drama series Sneaky Pete (2015–2019).',
         title: 'Dean Norris',
+        showDetails: true
     }
 ];

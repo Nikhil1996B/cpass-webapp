@@ -9,13 +9,28 @@ import faceBookIcon from "../../assets/facebookButton.png";
 import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
 import Hamburger from "../../assets/images/hamburger.png";
-// import Header from '../../components/partials/Header'
+import { Header } from '../../containers/VideoInfoPage/VideoInfoPage'
 import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
 import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
 import continueWaching from '../VideoInfoPage/__mock/continuewatching'
+import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
 import moviesMock from '../VideoInfoPage/__mock/movies'
 
 require('./HomePageStyle.scss')
+
+const HeaderSahdow = ({ Navshow, handleNavModal }) => {
+  return (
+    <div className="headerShadow">
+      <SideNav ></SideNav>
+      <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
+      <div className="right-navsection">
+        <Header />
+        <button className="upgrade">Upgrade</button>
+      </div>
+      <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
+    </div>
+  )
+}
 
 function HomePage() {
   const [inputs, setInputs] = useState({
@@ -45,17 +60,14 @@ function HomePage() {
 
   return (
     <div className="home-background">
-      <div className='d-flex'>
-        <SideNav ></SideNav>
-        <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
-      </div>
+      <HeaderSahdow Navshow={Navshow} handleNavModal={handleNavModal} />
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
       <div className="right-navsection">
         {/* <Header /> */}
       </div>
       <AutoPlaySlider {...settings} />
       <div className="darkgradient">
-        <GetContinueWatching continueWaching={continueWaching} />
+        <GetContinueWatching continueWaching={continueWatchinghome} />
         <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
       </div>
       <div>
