@@ -4,7 +4,7 @@ import { SignUpPage } from "../../containers/SignUpPage/SignUpPage";
 import { HomePage } from "../../containers/HomePage/HomePage";
 import { ErrorPage } from "../../containers/ErrorPage/ErrorPage";
 import { VideoPage } from "../../containers/VideoPage/VideoPage";
-import { VideoInfoPage } from "../../containers/VideoInfoPage/VideoInfoPage";
+import  VideoInfoPage  from "../../containers/VideoInfoPage/VideoInfoPage";
 
 function Routes() {
   return (

@@ -1,0 +1,5 @@
+export const types = {
+    GET_CAST: 'GET_CAST',
+    GET_RECOMMENDATION: 'GET_RECOMMENDATION',
+    GET_MOVIES: 'GET_MOVIES'
+}
