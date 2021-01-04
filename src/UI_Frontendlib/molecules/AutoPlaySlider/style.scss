@@ -18,10 +18,22 @@
     z-index: 1;
     margin-top: 49px;
 }
-.slick-slide img {
-    padding-left: 680px;
+.slick-slide .imgA1 {
+    padding-left: 610px;
 }
-
+img {
+    // position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.imgA1 {
+    z-index: 1;
+}
+.imgB1 {
+    height: 78px;
+    z-index: 3;
+    padding-left: 801px;
+}
 .autopaly-container div {
     background-color: #00bfff;
     .slick-dots {
@@ -82,4 +94,5 @@
     .slick-slider {
         margin: auto;
     }
+
 }

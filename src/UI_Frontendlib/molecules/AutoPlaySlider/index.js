@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PropTypes from 'prop-types';
 import image from './images/reactslider.png'
+import imageLogo from './images/imageLogo.png'
 
 require('./style.scss')
 
@@ -25,21 +26,24 @@ export class AutoPlaySlider extends Component {
                             <p>Watch latest movies</p>
                             <button className="upgrade">Upgrade</button>
                         </div>
-                        <img src={image} alt="" />
+                        <img src={image} alt="" className="imgA1" />
+                        <img src={imageLogo} alt="" className="imgB1" />
                     </div>
                     <div>
                         <div className="latest-movie">
                             <p>Watch latest movies</p>
                             <button className="upgrade">Upgrade</button>
                         </div>
-                        <img src={image} alt="" />
+                        <img src={image} alt="" className="imgA1" />
+                        <img src={imageLogo} alt="" className="imgB1" />
                     </div>
                     <div>
                         <div className="latest-movie">
                             <p>Watch latest movies</p>
                             <button className="upgrade">Upgrade</button>
                         </div>
-                        <img src={image} alt="" />
+                        <img src={image} alt="" className="imgA1" />
+                        <img src={imageLogo} alt="" className="imgB1" />
                     </div>
                 </Slider>
             </div>
