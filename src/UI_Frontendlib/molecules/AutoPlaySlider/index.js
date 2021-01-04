@@ -21,12 +21,24 @@ export class AutoPlaySlider extends Component {
             <div className="autopaly-container" data-test="sliderComponent">
                 <Slider {...settings}>
                     <div>
+                        <div className="latest-movie">
+                            <p>Watch latest movies</p>
+                            <button className="upgrade">Upgrade</button>
+                        </div>
                         <img src={image} alt="" />
                     </div>
                     <div>
+                        <div className="latest-movie">
+                            <p>Watch latest movies</p>
+                            <button className="upgrade">Upgrade</button>
+                        </div>
                         <img src={image} alt="" />
                     </div>
                     <div>
+                        <div className="latest-movie">
+                            <p>Watch latest movies</p>
+                            <button className="upgrade">Upgrade</button>
+                        </div>
                         <img src={image} alt="" />
                     </div>
                 </Slider>

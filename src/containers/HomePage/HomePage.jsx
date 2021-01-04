@@ -54,8 +54,10 @@ function HomePage() {
         {/* <Header /> */}
       </div>
       <AutoPlaySlider {...settings} />
-      <GetContinueWatching continueWaching={continueWaching} />
-      <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
+      <div className="darkgradient">
+        <GetContinueWatching continueWaching={continueWaching} />
+        <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
+      </div>
       <div>
         <Button variant="warning" onClick={handleModal}>
           Login

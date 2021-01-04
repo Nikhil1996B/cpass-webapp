@@ -57,11 +57,13 @@
 .upgrade {
     background: transparent linear-gradient(180deg, #ffbb3b 0%, #ffa90a 100%) 0% 0% no-repeat padding-box;
     border-radius: 9px;
-    padding: 3px;
+    padding: 11px;
     margin-left: 8px;
     opacity: 1;
+    text-transform: uppercase;
     border: none;
     width: 104px;
+    font-weight: 850;
 }
 
 @media screen and (max-width: $small-below) {
