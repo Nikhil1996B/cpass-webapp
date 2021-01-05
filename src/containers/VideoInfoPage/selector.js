@@ -1,6 +1,5 @@
-import { createSelector } from 'reselect';
-import keys from 'ramda/src/keys'
-import compose from 'ramda/src/compose'
+// import { createSelector } from 'reselect';
+
 
 export const getInfoState = state => {
     return state.videoInfo.cast
