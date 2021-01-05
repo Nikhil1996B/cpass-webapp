@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import { useSelector } from "react-redux"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -18,7 +19,7 @@ import moviesMock from '../VideoInfoPage/__mock/movies'
 
 require('./HomePageStyle.scss')
 
-const HeaderSahdow = ({ Navshow, handleNavModal }) => {
+const HeaderHome = ({ Navshow, handleNavModal }) => {
   return (
     <div className="headerShadow">
       <SideNav ></SideNav>
@@ -60,7 +61,7 @@ function HomePage() {
 
   return (
     <div className="home-background">
-      <HeaderSahdow Navshow={Navshow} handleNavModal={handleNavModal} />
+      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} />
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
       <div className="right-navsection">
         {/* <Header /> */}
@@ -133,4 +134,10 @@ function HomePage() {
     </div>
   );
 }
-export { HomePage };
+
+HomePage.propTypes = {
+  movies: PropTypes.array,
+  continueWatching: PropTypes.array
+}
+
+export default HomePage;

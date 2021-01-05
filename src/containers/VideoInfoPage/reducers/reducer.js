@@ -1,6 +1,6 @@
 import { types } from '../actions/types'
 
-export default function videoInfo(state = [], action) {
+export function videoInfo(state = [], action) {
     switch (action.type) {
         case types.GET_CAST:
             return action.payload

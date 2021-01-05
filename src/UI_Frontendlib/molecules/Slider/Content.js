@@ -1,5 +1,5 @@
 import React from 'react';
-import IconCross from '../../icons/Icons/IconCross';
+import IconCross from '../../icons/Icons/close.svg';
 
 require('./Content.scss')
 
@@ -24,7 +24,8 @@ const Content = ({ movie, onClose }) => (
         </div>
       </div>
       <button className="content__close" onClick={onClose}>
-        <IconCross />
+        {<img src={IconCross} alt="Icon cross"/>}
+        {/* <IconCross /> */}
       </button>
     </div>
   </div >

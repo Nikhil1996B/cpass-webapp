@@ -3,9 +3,8 @@ import { combineReducers } from "redux";
 import { DATA_LOADING, DATA_LOADED, UPDATE_DATA } from "../actions/example.action"
 
 // import component reducers
-import videoInfo from '../../src/containers/VideoInfoPage/reducers/reducer'
-import { movieInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'
-import { continueWatchingMovieInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'
+import { videoInfo, movieInfo, continueWatchingMovieInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'
+import { continueWachingInfo, popularMovieInfo } from '../../src/containers/HomePage/reducers/reducer'
 
 const initalState = { records: null, loading: false, error: null };
 
