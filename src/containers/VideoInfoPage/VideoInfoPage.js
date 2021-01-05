@@ -4,21 +4,14 @@ import SideNav from "../../components/SideNav/SideNav"
 import FullSideNav from "../../components/FullSideNav/FullSideNav"
 import Carosal from "../../components/Carosal";
 import PropTypes from 'prop-types';
-import { videoInfo } from './actions'
 import Hamburger from "../../assets/images/hamburger.png";
 import Slider from '../../UI_Frontendlib/molecules/Slider';
 import Search from '../../UI_Frontendlib/molecules/Search';
 import HeroBanner from '../../components/HeroBanner'
 import Footer from '../../components/Footer/footer'
 import './VideoInfoPage.scss';
-import castMock from './__mock/cast'
-import moviesMock from './__mock/movies'
-// import continueWaching from './__mock/continuewatching';
 import ErrorBoundary from './ErrorBoundary'
 
-// const movies = moviesMock
-
-// const cast = castMock
 
 export const Header = () => {
     const configSearch = {
@@ -87,11 +80,12 @@ export const GetContinueWatching = ({ continueWaching = [], title = "Continue wa
     )
 }
 
-function VideoInfoPage(props) {
+export default function VideoInfoPage(props) {
     const [Navshow, setNavShow] = useState(false);
     const handleNavModal = () => setNavShow(!Navshow);
 
     const { cast, movies, continueWaching } = props
+
     // TODO - replace the useEffect side effect with the redux flow design when it is to be rendered on page
     useEffect(() => {
         props.videoInfo()
@@ -104,9 +98,9 @@ function VideoInfoPage(props) {
                 <section aria-label="hero banner" className="bannerWrapper">
                     <HeroBanner />
                 </section>
-                {cast.length && <GetCardsCarosal cast={cast} data-test='castCarosalComponent' />}
-                {continueWaching.length && <GetContinueWatching continueWaching={continueWaching} data-test='continueWarchingComponent' />}
-                {movies.length && <GetRecommendationCarosal movies={movies} data-test='recommededMoviesComponent' />}
+                {cast && <GetCardsCarosal cast={cast} data-test='castCarosalComponent' />}
+                {continueWaching && <GetContinueWatching continueWaching={continueWaching} data-test='continueWarchingComponent' />}
+            {movies && <GetRecommendationCarosal movies={movies} data-test='recommededMoviesComponent' />}
                 {/* <Footer /> */}
             </div>
         </ErrorBoundary>
@@ -118,13 +112,3 @@ VideoInfoPage.propTypes = {
     continueWaching: PropTypes.array,
     movies: PropTypes.array
 }
-
-const mapStateToProps = state => {
-    return {
-        cast: state.cast,
-        movies: state.movie,
-        continueWaching: state.continueWatching
-    }
-}
-
-export default connect(mapStateToProps, { videoInfo })(VideoInfoPage)
