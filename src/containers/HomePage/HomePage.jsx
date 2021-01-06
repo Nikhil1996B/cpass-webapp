@@ -13,9 +13,9 @@ import Hamburger from "../../assets/images/hamburger.png";
 import { Header } from '../../containers/VideoInfoPage/VideoInfoPage'
 import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
 import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
-import continueWaching from '../VideoInfoPage/__mock/continuewatching'
-import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
-import moviesMock from '../VideoInfoPage/__mock/movies'
+// import continueWaching from '../VideoInfoPage/__mock/continuewatching'
+// import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
+// import moviesMock from '../VideoInfoPage/__mock/movies'
 
 require('./HomePageStyle.scss')
 
