@@ -1,6 +1,5 @@
 // import { createSelector } from 'reselect';
 
-
 export const getInfoState = state => {
     return state.videoInfo.cast
 }

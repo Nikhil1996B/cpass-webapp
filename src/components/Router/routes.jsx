@@ -13,7 +13,8 @@ const LazyVideoInfo = lazy(() => import('../../containers/VideoInfoPage/VideoInf
 
 const store = getStore();
 
-const MainSection = React.lazy(() =>
+
+const VideoPageRenderer = React.lazy(() =>
   import("../../containers/VideoInfoPage/container").then(async module => {
     const videoInfo = await import("../../containers/VideoInfoPage/reducers/reducer").then(
       videoModule => videoModule.default
@@ -24,15 +25,26 @@ const MainSection = React.lazy(() =>
   })
 );
 
+const homePageRenderer = React.lazy(() =>
+  import("../../containers/HomePage/container").then(async module => {
+    const homePage = await import("../../containers/HomePage/reducers/reducer").then(
+      homepageModule => homepageModule.default
+    );
+    store.injectReducer("homePage", homePage);
+
+    return module;
+  })
+);
+
 function Routes() {
   return (
     <BrowserRouter>
       <Suspense fallback={<LoadingSpinner />}>
         <Switch>
-          <Route exact path="/" component={LazyHome} />
-          <Route path="/home" component={LazyHome} />
+          <Route exact path="/" component={homePageRenderer} />
+          <Route path="/home" component={homePageRenderer} />
           <Route path="/player" component={VideoPage} />
-          <Route path="/videoinfo" component={MainSection} />
+          <Route path="/videoinfo" component={VideoPageRenderer} />
           <Route component={ErrorPage} />
         </Switch>
       </Suspense>

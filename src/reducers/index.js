@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import { DATA_LOADING, DATA_LOADED, UPDATE_DATA } from "../actions/example.action"
+// import { DATA_LOADING, DATA_LOADED, UPDATE_DATA } from "../actions/theme.action"
 
 // import component reducers
 // import { videoInfo, movieInfo, continueWatchingMovieInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'

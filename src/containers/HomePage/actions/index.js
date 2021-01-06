@@ -1,8 +1,8 @@
 import { types } from './types';
 
 // TODO - Following imports to be removed and the data to be fetched from actual HTTP call to service
-import movie from '../__mock/movies'
-import continueWaching from '../__mock/continuewatching'
+import movie from '../../VideoInfoPage/__mock/movies'
+import continueWaching from '../../VideoInfoPage/__mock/continuewatching'
 
 // Action creator
 const popularMovie = payload => ({ type: types.GET_CONTINUEWATCHING, payload });

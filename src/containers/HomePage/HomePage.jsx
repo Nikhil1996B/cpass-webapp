@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import { useSelector } from "react-redux"
 import Modal from "react-bootstrap/Modal";
@@ -33,7 +33,7 @@ const HeaderHome = ({ Navshow, handleNavModal }) => {
   )
 }
 
-function HomePage() {
+function HomePage(props) {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -46,6 +46,7 @@ function HomePage() {
 
   const { email, password } = inputs;
 
+  const { movies, continueWaching } = props;
   // Configure Autoplay slider
   const settings = {
     dots: true,
@@ -59,6 +60,10 @@ function HomePage() {
     display: true
   };
 
+  useEffect(() => {
+    props.videoInfo()
+  }, [])
+
   return (
     <div className="home-background">
       <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} />
@@ -68,8 +73,8 @@ function HomePage() {
       </div>
       <AutoPlaySlider {...settings} />
       <div className="darkgradient">
-        <GetContinueWatching continueWaching={continueWatchinghome} />
-        <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
+        {continueWaching && <GetContinueWatching continueWaching={continueWaching} />}
+        {movies && <GetRecommendationCarosal title={'Popular'} movies={movies} />}
       </div>
       <div>
         <Button variant="warning" onClick={handleModal}>
