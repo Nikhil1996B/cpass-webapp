@@ -1,14 +1,11 @@
 import { apiTokenService } from "../services";
 //import { alertActions } from "./";
-import { apiTokenConstants, themesConstants } from "../constants";
-import { themeActions } from "./theme.action"
+import { apiTokenConstants } from "../constants";
 
 export const apiTokenActions = {
   login,
   logout,
 };
-
-
 
 function login(username, password) {
   return (dispatch) => {
@@ -16,7 +13,6 @@ function login(username, password) {
     apiTokenService.login(username, password).then(
       (user) => {
         dispatch(success(user));
-        dispatch(themeActions.themes())
       },
       (error) => {
         dispatch(failure(error.toString()));
@@ -24,9 +20,6 @@ function login(username, password) {
       }
     );
   };
-
-
-
 
   function request(user) {
     return { type: apiTokenConstants.LOGIN_REQUEST, user };

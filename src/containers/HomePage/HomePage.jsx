@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import SignupLoginModal from "../../components/Dialogs/SignupLoginModal";
@@ -13,17 +13,16 @@ import Hamburger from "../../assets/images/hamburger.png";
 import { Header } from '../../containers/VideoInfoPage/VideoInfoPage'
 import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
 import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
-import { apiTokenActions } from "../../actions";
-// import continueWaching from '../VideoInfoPage/__mock/continuewatching'
-// import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
-// import moviesMock from '../VideoInfoPage/__mock/movies'
+import continueWaching from '../VideoInfoPage/__mock/continuewatching'
+import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
+import moviesMock from '../VideoInfoPage/__mock/movies'
 
 require('./HomePageStyle.scss')
 
-const HeaderHome = ({ Navshow, handleNavModal, assets }) => {
+const HeaderHome = ({ Navshow, handleNavModal }) => {
   return (
     <div className="headerShadow">
-      <SideNav assets={assets}></SideNav>
+      <SideNav ></SideNav>
       <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
       <div className="right-navsection">
         <Header />
@@ -34,7 +33,7 @@ const HeaderHome = ({ Navshow, handleNavModal, assets }) => {
   )
 }
 
-function HomePage(props) {
+function HomePage() {
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -47,7 +46,6 @@ function HomePage(props) {
 
   const { email, password } = inputs;
 
-  const { movies, continueWaching, theme = undefined } = props;
   // Configure Autoplay slider
   const settings = {
     dots: true,
@@ -60,30 +58,18 @@ function HomePage(props) {
     cssEase: "linear",
     display: true
   };
-  const themes = useSelector(state => state.ThemeReducer);
-
-  // console.log('themes', themes)
-  const dispatch = useDispatch();
-  //get api token
-  useEffect(() => {
-    if (!themes._id) {
-      dispatch(apiTokenActions.login());
-
-    }
-    props.videoInfo();
-  }, [dispatch, themes]);
 
   return (
     <div className="home-background">
-      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} assets={themes} />
+      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} />
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
       <div className="right-navsection">
         {/* <Header /> */}
       </div>
       <AutoPlaySlider {...settings} />
       <div className="darkgradient">
-        {continueWaching && <GetContinueWatching continueWaching={continueWaching} />}
-        {movies && <GetRecommendationCarosal title={'Popular'} movies={movies} />}
+        <GetContinueWatching continueWaching={continueWatchinghome} />
+        <GetRecommendationCarosal title={'Popular'} movies={moviesMock} />
       </div>
       <div>
         <Button variant="warning" onClick={handleModal}>
@@ -135,7 +121,7 @@ function HomePage(props) {
           <div className="social-login"><h2><span>Social login</span></h2></div>
           <div className="social-img">
             <img className="fb-icon"
-              src={''}
+              src={faceBookIcon}
               alt="fb"
               width="75px"
             />{" "}

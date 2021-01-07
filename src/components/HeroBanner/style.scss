@@ -13,19 +13,20 @@ p {
 }
 
 .sub-type {
+    font-size: inherit;
     margin: 0 0 0 24px;
     padding: 18px 0;
 }
 
 .cotnent {
-    text-shadow: 2px 2px 8px #080808;
+    // text-shadow: 2px 2px 8px #080808;
 }
 
 .hero-banner {
     display: flex;
     z-index: 1;
     flex-direction: row;
-    min-height: 74vh;
+    min-height: 58vh;
     background: rgba(255, 255, 255, 0.082);
     border-radius: 4px;
     background-position: right 3em bottom 10px;
@@ -43,7 +44,7 @@ p {
 
 .hero-banner:before {
     content: " ";
-    opacity: 0.6;
+    opacity: 0.69;
     display: block;
     position: absolute;
     height: 100%;
@@ -53,9 +54,9 @@ p {
     background: rgba(0, 0, 0, 0.5);
     content: "";
     background-attachment: fixed;
-    box-shadow: inset 93px 2px 139px 128px #707070;
+    box-shadow: inset 93px 538px 139px 128px #707070;
     filter: blur(8px);
-    background-image: url("./images/narcos.png");
+    background-image: url(/static/media/narcos.0ef60554.png) no-repeat;
     z-index: 1;
 }
 
@@ -72,14 +73,14 @@ p {
 }
 
 .blackLayer {
-    box-shadow: -97px -33px 49px #000;
-    opacity: 0.95;
-    right: 0;
-    z-index: 5;
-    background: #000;
-    position: absolute;
-    width: 13%;
-    height: 91%;
+    // box-shadow: -102px -52px 49px black;
+    // opacity: 0.95;
+    // right: 0;
+    // z-index: 5;
+    // background: black;
+    // position: absolute;
+    // width: 13%;
+    // height: 100%;
 }
 
 .ratingsSection {
@@ -90,8 +91,8 @@ p {
     h2 {
         text-align: left;
         margin: 0 0 0 24px;
-        font-weight: 600;
-        font: normal normal normal 33px GothamLight;
+        // font-weight: 1000;
+        font: 33px bold GothamLight;
         letter-spacing: 0px;
         color: #ffffff;
         opacity: 1;
@@ -137,7 +138,7 @@ p {
     // letter-spacing: -0.24px;
     padding: 4px;
     color: #ffffff;
-    opacity: 0.5;
+    opacity: 0.95;
     span {
         padding-left: 12px;
     }
@@ -145,16 +146,21 @@ p {
 
 .genres {
     margin: 8px;
-    background: #bebebe 0% 0% no-repeat padding-box;
+    background: #bebebe 0no-repeat padding-box;
     border-radius: 7px;
     border: none;
     opacity: 1;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(37px);
     -webkit-backdrop-filter: blur(30px);
     width: 93px;
     font: normal normal medium 17px/22px Gilroy ☞;
     color: white;
     height: 40px;
+    span {
+        top: 11px;
+        position: absolute;
+        right: 16px;
+    }
 }
 
 // Movie types css section
@@ -190,9 +196,10 @@ p {
         display: none;
     }
     .desc-img {
+        text-align: center;
         left: 69%;
         img {
-            width: 100%;
+            width: 66%;
         }
     }
     .ratings-value {

@@ -13,6 +13,7 @@ const movieinfo = payload => ({ type: types.GET_MOVIES, payload });
 const continueWachingMovieInfo = payload => ({ type: types.GET_RECOMMENDATION, payload })
 
 export const videoInfo = () => async (dispatch) => {
+    dispatch(doCastInfoItem(castMock))
     dispatch(movieinfo(movie))
     dispatch(continueWachingMovieInfo(continueWaching))
 };

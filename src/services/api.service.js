@@ -1,4 +1,4 @@
-import { config, themeConfig } from "./config";
+import { config } from "./config";
 import { encrypt } from "../helpers";
 
 export const apiTokenService = {
@@ -20,7 +20,7 @@ async function login() {
     .then(handleResponse)
     .then((user) => {
       // store user details and jwt token in local storage to keep user logged in between page refreshes
-      localStorage.setItem("apiToken", user.token);
+      localStorage.setItem("apiToken", JSON.stringify(user.token));
       return user;
     });
 }
@@ -30,7 +30,7 @@ function logout() {
   localStorage.removeItem("apiToken");
 }
 
-export function handleResponse(response) {
+function handleResponse(response) {
   return response.text().then((text) => {
     const data = text && JSON.parse(text);
     if (!response.ok) {

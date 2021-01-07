@@ -4,7 +4,9 @@ import bdImg from './images/bd.png'
 import Ratings from '../../UI_Frontendlib/atoms/ratings/ratings'
 import RatingsButton from '../../UI_Frontendlib/atoms/RatingsButton'
 import like from './images/like.png'
-
+import playBtn from "./images/playBtn.png"
+import share from "./images/Share.svg"
+import download from "./images/Download.svg"
 require('./style.scss')
 
 /**
@@ -17,18 +19,30 @@ export class HeroBanner extends Component {
         return (
             <div className="sub-type" data-test='genereComponent'>
                 <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
-                    <label className="btn genres">
-                        <input type="checkbox" className="form-check list-group-item" />Action
-                </label>
-                    <label className="btn genres">
-                        <input type="checkbox" className="form-check list-group-item" />Crime
-                </label>
-                    <label className="btn genres">
-                        <input type="checkbox" className="form-check list-group-item" />Drama
-                 </label>
-                    <label className="btn genres">
-                        <input type="checkbox" className="form-check list-group-item" />Fantasy
-                </label>
+                    <span className="btn genres">
+                        <span type="checkbox" className="form-check list-group-item" />
+                        <span>
+                            Action
+                        </span>
+                    </span>
+                    <span className="btn genres">
+                        <span type="checkbox" className="form-check list-group-item" />
+                        <span>
+                            Crime
+                        </span>
+                    </span>
+                    <span className="btn genres">
+                        <span type="checkbox" className="form-check list-group-item" />
+                        <span>
+                            Drama
+                        </span>
+                    </span>
+                    <span className="btn genres">
+                        <span type="checkbox" className="form-check list-group-item" />
+                        <span>
+                            Fantasy
+                        </span>
+                    </span>
                 </div></div>
         )
     }
@@ -48,20 +62,10 @@ export class HeroBanner extends Component {
                             Like
                         </span>
                     </a>
+
                     <a href="/videoinfo" className="icon-link">
                         <img
-                            src={like}
-                            alt="devices-logo"
-                            className="like-logo"
-                        ></img>
-                        <br />
-                        <span>
-                            Like
-                        </span>
-                    </a>
-                    <a href="/videoinfo" className="icon-link">
-                        <img
-                            src={like}
+                            src={share}
                             alt="devices-logo"
                             className="like-logo"
                         ></img>
@@ -72,13 +76,24 @@ export class HeroBanner extends Component {
                     </a>
                     <a href="/videoinfo" className="icon-link">
                         <img
-                            src={like}
+                            src={playBtn}
                             alt="devices-logo"
                             className="like-logo"
                         ></img>
                         <br />
                         <span>
-                            Download
+                            Play
+                        </span>
+                    </a>
+                    <a href="/videoinfo" className="icon-link">
+                        <img
+                            src={download}
+                            alt="devices-logo"
+                            className="like-logo"
+                        ></img>
+                        <br />
+                        <span>
+                            watch later
                         </span>
                     </a>
                 </div>
@@ -99,7 +114,7 @@ export class HeroBanner extends Component {
 
         const fetch = () => {
             // Initiate fetch action
-            // console.log('callback for fetch')
+            console.log('callback for fetch')
         }
 
         const configButton = {

@@ -9,6 +9,7 @@
 }
 
 .autopaly-container {
+    margin: 40px 30px 20px 91px;
     padding: 2em;
     background-image: url("./images/blackgradient.png"); /* 1 */
     background-image: linear-gradient(var(--background-color), 96%, var(--background-color));
@@ -16,7 +17,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    margin-top: 49px;
 }
 .slick-slide .imgA1 {
     padding-left: 40%;

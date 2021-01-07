@@ -5,16 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 //import "font-awesome/css/font-awesome.min.css";
 //import "./style.css";
 import Routes from "../../components/Router/routes";
-// import { apiTokenActions } from "../../actions";
+import { apiTokenActions } from "../../actions";
 
 function App() {
   //const alert = useSelector((state) => state.alert);
   const dispatch = useDispatch();
 
   //get api token
-  // useEffect(() => {
-  //   dispatch(apiTokenActions.login());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(apiTokenActions.login());
+  }, [dispatch]);
   // useEffect(() => {
   //   history.listen((location, action) => {
   //     // clear alert on location change

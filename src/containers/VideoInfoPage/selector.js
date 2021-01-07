@@ -1,7 +1,6 @@
-// import { createSelector } from 'reselect';
-
-// TODO -- replace with useselector from react redux
-//const list = useSelector(state => state.list);
+import { createSelector } from 'reselect';
+import keys from 'ramda/src/keys'
+import compose from 'ramda/src/compose'
 
 export const getInfoState = state => {
     return state.videoInfo.cast
