@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import SignupLoginModal from "../../components/Dialogs/SignupLoginModal";
@@ -13,16 +13,17 @@ import Hamburger from "../../assets/images/hamburger.png";
 import { Header } from '../../containers/VideoInfoPage/VideoInfoPage'
 import AutoPlaySlider from '../../UI_Frontendlib/molecules/AutoPlaySlider'
 import { GetContinueWatching, GetRecommendationCarosal } from '../VideoInfoPage/VideoInfoPage'
+import { apiTokenActions } from "../../actions";
 // import continueWaching from '../VideoInfoPage/__mock/continuewatching'
 // import continueWatchinghome from '../VideoInfoPage/__mock/continueWatchinghome'
 // import moviesMock from '../VideoInfoPage/__mock/movies'
 
 require('./HomePageStyle.scss')
 
-const HeaderHome = ({ Navshow, handleNavModal }) => {
+const HeaderHome = ({ Navshow, handleNavModal, assets }) => {
   return (
     <div className="headerShadow">
-      <SideNav ></SideNav>
+      <SideNav assets={assets}></SideNav>
       <img src={Hamburger} alt="icon" className="icon" onClick={handleNavModal} />
       <div className="right-navsection">
         <Header />
@@ -46,7 +47,7 @@ function HomePage(props) {
 
   const { email, password } = inputs;
 
-  const { movies, continueWaching } = props;
+  const { movies, continueWaching, assets = undefined } = props;
   // Configure Autoplay slider
   const settings = {
     dots: true,
@@ -60,13 +61,17 @@ function HomePage(props) {
     display: true
   };
 
+  const dispatch = useDispatch();
+
+  //get api token
   useEffect(() => {
-    props.videoInfo()
-  }, [])
+    dispatch(apiTokenActions.login());
+    props.videoInfo();
+  }, [dispatch]);
 
   return (
     <div className="home-background">
-      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} />
+      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} assets={assets} />
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
       <div className="right-navsection">
         {/* <Header /> */}
@@ -126,7 +131,7 @@ function HomePage(props) {
           <div className="social-login"><h2><span>Social login</span></h2></div>
           <div className="social-img">
             <img className="fb-icon"
-              src={faceBookIcon}
+              src={''}
               alt="fb"
               width="75px"
             />{" "}

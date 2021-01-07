@@ -1,16 +1,19 @@
 import { combineReducers } from "redux";
 
+import ThemeReducer from "./themeReducer"
+import { videoInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'
+import homepageReducer from '../../src/containers/HomePage/reducers/reducer'
+
 // import { DATA_LOADING, DATA_LOADED, UPDATE_DATA } from "../actions/theme.action"
-
 // import component reducers
-// import { videoInfo, movieInfo, continueWatchingMovieInfo } from '../../src/containers/VideoInfoPage/reducers/reducer'
 
 
-export const createReducer = asyncReducers => {
-    return combineReducers({
-        ...asyncReducers
-    });
-};
+const rootReducer = combineReducers({ ThemeReducer, videoInfo, homepageReducer });
+export default rootReducer
 
-// const rootReducer = combineReducers({ cast: videoInfo, movie: movieInfo, continueWatching: continueWatchingMovieInfo });
 
+// export const createReducer = asyncReducers => {
+//     return combineReducers({
+//         ...asyncReducers
+//     });
+// };

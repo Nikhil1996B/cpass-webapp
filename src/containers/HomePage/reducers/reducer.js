@@ -8,8 +8,6 @@ export default function homepageReducer(state = initialState, action) {
             return { ...state, movies: action.payload, loading: false, error: null }
         case types.GET_CONTINUEWATCHING:
             return { ...state, continueWaching: action.payload, loading: false, error: null }
-        case types.GET_THEME_SUCCESS:
-            return { ...state, theme: action.theme, loading: false, error: null }
         default:
             return state;
     }

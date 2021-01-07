@@ -1,8 +1,12 @@
 
 export const getcontinueWachingMovieState = state => {
-    return state.homePage.continueWaching
+    return state.homepageReducer.continueWaching
 }
 
 export const getRecommState = state => {
-    return state.homePage.movies
+    return state.homepageReducer.movies
+}
+
+export const getThemeSelector = state => {
+    return state.ThemeReducer
 }
