@@ -52,49 +52,57 @@ export class HeroBanner extends Component {
             <div className="action-panel" data-test='actionComponent'>
                 <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
                     <a href="/videoinfo" className="icon-link">
-                        <img
-                            src={like}
-                            alt="devices-logo"
-                            className="like-logo"
-                        ></img>
-                        <br />
-                        <span>
-                            Like
+                        <div className="logoWrapper">
+                            <img
+                                src={like}
+                                alt="devices-logo"
+                                className="like-logo"
+                            ></img>
+                            <br />
+                            <span>
+                                Like
                         </span>
+                        </div>
                     </a>
 
                     <a href="/videoinfo" className="icon-link">
-                        <img
-                            src={share}
-                            alt="devices-logo"
-                            className="like-logo"
-                        ></img>
-                        <br />
-                        <span>
-                            share
+                        <div className="logoWrapper">
+                            <img
+                                src={share}
+                                alt="devices-logo"
+                                className="like-logo"
+                            ></img>
+                            <br />
+                            <span>
+                                share
                         </span>
+                        </div>
                     </a>
                     <a href="/player" className="icon-link">
-                        <img
-                            src={playBtn}
-                            alt="devices-logo"
-                            className="like-logo"
-                        ></img>
-                        <br />
-                        <span>
-                            Play
+                        <div className="logoWrapper">
+                            <img
+                                src={playBtn}
+                                alt="devices-logo"
+                                className="like-logo"
+                            ></img>
+                            <br />
+                            <span>
+                                Play
                         </span>
+                        </div>
                     </a>
                     <a href="/videoinfo" className="icon-link">
-                        <img
-                            src={download}
-                            alt="devices-logo"
-                            className="like-logo"
-                        ></img>
-                        <br />
-                        <span>
-                            watch later
+                        <div className="logoWrapper">
+                            <img
+                                src={download}
+                                alt="devices-logo"
+                                className="like-logo"
+                            ></img>
+                            <br />
+                            <span>
+                                watch later
                         </span>
+                        </div>
                     </a>
                 </div>
             </div >
