@@ -74,7 +74,7 @@ export class HeroBanner extends Component {
                             share
                         </span>
                     </a>
-                    <a href="/videoinfo" className="icon-link">
+                    <a href="/player" className="icon-link">
                         <img
                             src={playBtn}
                             alt="devices-logo"
