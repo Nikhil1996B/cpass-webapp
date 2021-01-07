@@ -8,7 +8,7 @@ import playBtn from "./images/playBtn.png"
 import share from "./images/Share.svg"
 import download from "./images/Download.svg"
 import thumnail from "./images/BreakingBadThumbnail.jpg"
-import BreakingBad from "./Video/BreakingBad.mp4"
+// import BreakingBad from "./Video/BreakingBad.mp4"
 import bbd from "./images/bbd.jpg"
 require('./style.scss')
 
@@ -195,7 +195,7 @@ export class HeroBanner extends Component {
                             zIndex: "1"
                         }}
                     >
-                        <source src={BreakingBad} type="video/mp4" />
+                        <source src={"https://giant.gfycat.com/VerifiableTerrificHind.mp4"} type="video/mp4" />
                     </video>
                     {this.imageContent}
                 </div>
