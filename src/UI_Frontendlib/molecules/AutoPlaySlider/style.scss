@@ -19,7 +19,7 @@
     z-index: 1;
 }
 .slick-slide .imgA1 {
-    padding-left: 40%;
+    // padding-left: 34%;
 }
 img {
     // position: absolute;
@@ -32,10 +32,10 @@ img {
 .imgB1 {
     height: 78px;
     z-index: 3;
-    padding-left: 801px;
+    // padding-left: 801px;
 }
 .autopaly-container div {
-    background-color: #00bfff;
+    // background-color: #00bfff;
     .slick-dots {
         position: relative;
         right: 0;
@@ -44,6 +44,18 @@ img {
 .slick-slider {
     margin: 0 90px 0 90px;
 }
+
+/* col-lg - Large Desktop screens */
+@media (min-width: 1090px) {
+    .slick-slide .imgA1 {
+        width: 58%;
+        padding-left: 145px;
+    }
+    .slick-slide .imgB1 {
+        padding-left: 420px;
+    }
+}
+
 .slick-dots li button:before {
     font-family: "slick";
     font-size: 14px;
@@ -94,5 +106,7 @@ img {
     .slick-slider {
         margin: auto;
     }
-
+    .slick-next {
+        display: none;
+    }
 }

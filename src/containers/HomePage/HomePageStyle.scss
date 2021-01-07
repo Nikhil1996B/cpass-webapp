@@ -320,11 +320,11 @@ h2 span {
     width: 61%;
   }
   .slick-slide .imgA1 {
-    height: 152px;
+    height: 123px;
     padding-left: 0%;
   }
   .latest-movie {
-    position: absolute;
+    position: relative;
     width: 1%;
     text-align: center;
     font: normal normal bold 11px Gotham;
@@ -332,13 +332,19 @@ h2 span {
     color: #ffffff;
     padding: 9px;
     opacity: 1;
-    width: 1px;
+    display: flex;
+    width: 100%;
     p {
+      font-size: 12px;
       padding-left: 6px;
     }
   }
   .upgrade {
-    width: 62px;
-    font-size: 8px;
+    // width: 62px;
+    font-size: 14px;
+  }
+  .slick-next,
+  .slick-next {
+    display: none !important;
   }
 }
