@@ -7,6 +7,9 @@ import like from './images/like.png'
 import playBtn from "./images/playBtn.png"
 import share from "./images/Share.svg"
 import download from "./images/Download.svg"
+import thumnail from "./images/BreakingBadThumbnail.jpg"
+import BreakingBad from "./Video/BreakingBad.mp4"
+import bbd from "./images/bbd.jpg"
 require('./style.scss')
 
 /**
@@ -143,7 +146,7 @@ export class HeroBanner extends Component {
                 </div>}
                 {<p className="sub-type cotnent">{`43 Minutes - USA`}</p>}
                 {this.genereType}
-                {<p className="sub-type cotnent">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
+                {<p className="sub-type cotnent max-width">{`A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.`}</p>}
                 {this.actionPanel}
             </div>
         )
@@ -161,10 +164,39 @@ export class HeroBanner extends Component {
 
 
     render() {
+        const stopMovie = (e) => {
+
+            console.log('off');
+        }
+
+        const playMovie = (e) => {
+
+            console.log('on');
+        }
         return (
             <>
                 <div className="blackLayer" />
-                <div className="hero-banner" >
+                <div className="hero-banner"
+
+                >
+                    <video
+                        poster={bbd}
+                        onMouseOver={(e) => e.target.play()}
+                        loop
+                        muted
+                        onMouseOut={(e) => e.target.pause()}
+                        style={{
+                            position: "absolute",
+                            width: "100%",
+                            left: "50%",
+                            top: "50%",
+                            height: "100%",
+                            transform: "translate(-50%, -50%)",
+                            zIndex: "1"
+                        }}
+                    >
+                        <source src={BreakingBad} type="video/mp4" />
+                    </video>
                     {this.imageContent}
                 </div>
             </>
