@@ -50,7 +50,7 @@ export class HeroBanner extends Component {
     get actionPanel() {
         return (
             <div className="action-panel" data-test='actionComponent'>
-                <div className="form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
+                <div className="deck form-check list-inline list-group-horizontal btn-group" role="group" data-toggle="buttons">
                     <a href="/videoinfo" className="icon-link">
                         <div className="logoWrapper">
                             <img
