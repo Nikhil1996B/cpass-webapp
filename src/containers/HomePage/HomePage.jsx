@@ -41,6 +41,7 @@ function HomePage(props) {
     confirmpassword: "",
   });
   const [show, setShow] = useState(false);
+  const [themeId, setApiToken] = useState('');
   const [Navshow, setNavShow] = useState(false);
   const handleNavModal = () => setNavShow(!Navshow);
   const handleModal = () => setShow(true);
@@ -60,12 +61,12 @@ function HomePage(props) {
     cssEase: "linear",
     display: true
   };
-
+  const a = useSelector(state => state.ThemeReducer);
+  console.log('qqqqqq', a)
   const dispatch = useDispatch();
-
   //get api token
   useEffect(() => {
-    dispatch(apiTokenActions.login());
+    if (!a) { dispatch(apiTokenActions.login()); }
     props.videoInfo();
   }, [dispatch]);
 
