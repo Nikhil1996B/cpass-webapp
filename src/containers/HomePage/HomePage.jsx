@@ -41,14 +41,13 @@ function HomePage(props) {
     confirmpassword: "",
   });
   const [show, setShow] = useState(false);
-  const [themeId, setApiToken] = useState('');
   const [Navshow, setNavShow] = useState(false);
   const handleNavModal = () => setNavShow(!Navshow);
   const handleModal = () => setShow(true);
 
   const { email, password } = inputs;
 
-  const { movies, continueWaching, assets = undefined } = props;
+  const { movies, continueWaching, theme = undefined } = props;
   // Configure Autoplay slider
   const settings = {
     dots: true,
@@ -61,18 +60,22 @@ function HomePage(props) {
     cssEase: "linear",
     display: true
   };
-  const a = useSelector(state => state.ThemeReducer);
-  console.log('qqqqqq', a)
+  const themes = useSelector(state => state.ThemeReducer);
+
+  // console.log('themes', themes)
   const dispatch = useDispatch();
   //get api token
   useEffect(() => {
-    if (!a) { dispatch(apiTokenActions.login()); }
+    if (!themes._id) {
+      dispatch(apiTokenActions.login());
+
+    }
     props.videoInfo();
-  }, [dispatch]);
+  }, [dispatch, themes]);
 
   return (
     <div className="home-background">
-      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} assets={assets} />
+      <HeaderHome Navshow={Navshow} handleNavModal={handleNavModal} assets={themes} />
       <FullSideNav show={Navshow} handleModal={handleNavModal}></FullSideNav>
       <div className="right-navsection">
         {/* <Header /> */}

@@ -12,7 +12,7 @@ import devicesLogo from "../../assets/images/devices.svg"
 
 function SideNav({ assets }) {
   const [show, setShow] = useState(false);
-  // console.log(assets && assets.icons ? assets.icons.devices : '')
+  console.log(assets && assets.icons ? assets.icons.devices : '')
   return (
     <div className="sidenav">
       <a href="/home" >
@@ -29,7 +29,7 @@ function SideNav({ assets }) {
         <img src={seriesLogo} alt="series-logo" className="series-logo"></img>
       </a>
       <a href="/home">
-        <img src={devicesLogo} alt="devices-logo" className="devices-logo"></img>
+        <img src={assets && assets.icons ? assets.icons.devices : devicesLogo} alt="devices-logo" className="devices-logo"></img>
       </a>
       <a href="/home">
         <img src={userLogo} alt="user-logo" className="user-logo"></img>

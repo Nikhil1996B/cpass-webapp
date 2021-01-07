@@ -46,7 +46,6 @@ const Slider = ({ children, activeSlide }) => {
         </div>
         {(hasPrev && <SlideButton onClick={handlePrev} type="prev" />)}
         {(hasNext && <SlideButton onClick={handleNext} type="next" />)}
-        {console.log(currentSlide)}
       </SliderWrapper>
       {currentSlide && <Content movie={currentSlide} onClose={handleClose} />}
     </SliderContext.Provider>
