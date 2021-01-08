@@ -100,7 +100,7 @@ export default function VideoInfoPage(props) {
                 </section>
                 {cast && <GetCardsCarosal cast={cast} data-test='castCarosalComponent' />}
                 {continueWaching && <GetContinueWatching continueWaching={continueWaching} data-test='continueWarchingComponent' />}
-            {movies && <GetRecommendationCarosal movies={movies} data-test='recommededMoviesComponent' />}
+                {movies && <GetRecommendationCarosal movies={movies} data-test='recommededMoviesComponent' />}
                 {/* <Footer /> */}
             </div>
         </ErrorBoundary>

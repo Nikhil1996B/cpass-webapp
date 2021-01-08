@@ -57,6 +57,12 @@
   margin-left: 30%;
   margin-top: 200%;
 }
+
+.devices-logo {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
 .series-logo,
 .devices-logo,
 .user-logo,
@@ -69,6 +75,5 @@
 
 @font-face {
   font-family: "GothamLight";
-  src: local("GothamLight"),
-    url(../../assets/fonts/GothamLight.ttf) format("woff");
+  src: local("GothamLight"), url(../../assets/fonts/GothamLight.ttf) format("woff");
 }

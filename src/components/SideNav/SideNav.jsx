@@ -10,34 +10,35 @@ import userLogo from "../../assets/images/user.svg"
 import logoutLogo from "../../assets/images/logout-2.svg"
 import devicesLogo from "../../assets/images/devices.svg"
 
-function SideNav() {
+function SideNav({ assets }) {
   const [show, setShow] = useState(false);
+  console.log(assets && assets.icons ? assets.icons.devices : '')
   return (
     <div className="sidenav">
-      <a href ="/home" >
-      <img src={Logo} alt="nav-logo" className="nav-logo"/>
+      <a href="/home" >
+        <img src={Logo} alt="nav-logo" className="nav-logo" />
       </a>
-      <a href ="/home">
-      <img src={profile} alt="profie-pic" className="profile-pic"/>
+      <a href="/home">
+        <img src={profile} alt="profie-pic" className="profile-pic" />
       </a>
       <span className="caption">JD</span>
-      <a href ="/home">
-      <img src={movieLogo} alt="movie-logo" className="movie-logo"></img>
+      <a href="/home">
+        <img src={movieLogo} alt="movie-logo" className="movie-logo"></img>
       </a>
-      <a href ="/home">
-      <img src={seriesLogo} alt="series-logo" className="series-logo"></img>
+      <a href="/home">
+        <img src={seriesLogo} alt="series-logo" className="series-logo"></img>
       </a>
-      <a href ="/home">
-      <img src={devicesLogo} alt="devices-logo" className="devices-logo"></img>
+      <a href="/home">
+        <img src={assets && assets.icons ? assets.icons.devices : devicesLogo} alt="devices-logo" className="devices-logo"></img>
       </a>
-      <a href ="/home">
-      <img src={userLogo} alt="user-logo" className="user-logo"></img>
+      <a href="/home">
+        <img src={userLogo} alt="user-logo" className="user-logo"></img>
       </a>
-      <a href ="/home">
-      <img src={logoutLogo} alt="logout-logo" className="logout-logo"></img>
+      <a href="/home">
+        <img src={logoutLogo} alt="logout-logo" className="logout-logo"></img>
       </a>
-      
-      
+
+
     </div>
   );
 }

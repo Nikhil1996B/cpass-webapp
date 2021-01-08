@@ -125,7 +125,7 @@ export class HeroBanner extends Component {
 
         const fetch = () => {
             // Initiate fetch action
-            console.log('callback for fetch')
+            // console.log('callback for fetch')
         }
 
         const configButton = {

@@ -1,19 +1,13 @@
 import { types } from '../actions/types'
 
+const initialState = {}
 
-export function continueWachingInfo(state = [], action) {
-    switch (action.type) {
-        case types.GET_CONTINUEWATCHING:
-            return action.payload
-        default:
-            return state;
-    }
-}
-
-export function popularMovieInfo(state = [], action) {
+export default function homepageReducer(state = initialState, action) {
     switch (action.type) {
         case types.GET_RECOMMENDEDMOVIES:
-            return action.payload
+            return { ...state, movies: action.payload, loading: false, error: null }
+        case types.GET_CONTINUEWATCHING:
+            return { ...state, continueWaching: action.payload, loading: false, error: null }
         default:
             return state;
     }
