@@ -23,6 +23,28 @@ const Item = ({ movie }) => (
           }
           }
         >
+          <div className="hoverDiv" />
+          <div className="info">
+            <video
+              poster={""}
+              onMouseOver={(e) => e.target.play()}
+              loop
+              muted
+              onMouseOut={(e) => e.target.pause()}
+              style={{
+                position: "absolute",
+                width: "100%",
+                left: "50%",
+                top: "50%",
+                height: "100%",
+                transform: "translate(-50%, -50%)",
+                zIndex: "1"
+              }}
+            >
+              <source src={"https://giant.gfycat.com/VerifiableTerrificHind.mp4"} type="video/mp4" />
+            </video>
+          </div>
+
           <img src={movie.image} alt="" />
           {movie.progress && <div>
             <Progress value={movie.progress} />

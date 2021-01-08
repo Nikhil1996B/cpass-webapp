@@ -30,6 +30,14 @@
   margin: 0 0 0 80px;
 }
 
+.info {
+  opacity: 0;
+}
+
+.info:hover {
+   opacity: 1;
+}
+
 @media screen and (max-width: $small-below) {
   .slider-cover {
     margin: 0 0 0 45px;
